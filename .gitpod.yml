@@ -2,7 +2,7 @@
 tasks:
   - name: Script Task
     init: npm i -g @angular/cli && npm install -D tailwindcss postcss autoprefixer # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
-    command: echo 'start script'
+    command: npm start
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 ports:
