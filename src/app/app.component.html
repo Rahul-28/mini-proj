@@ -1,9 +1,58 @@
 <div class="containerapp">
     <div class="upperpart">
         <!-- <img src="../assets/pexels-pixabay-36717.jpg"> -->
-        <!-- <img src="../assets/pexels-rafael-cerqueira-4737484.jpg"> -->
+        <img src="../assets/pexels-rafael-cerqueira-4737484.jpg">
+        <div class="weather-data">
+            <div class="location">MADURAI</div>
+            <div class="temperature">{{ 14.40 | number: '1.0-0' }} °C</div>
+        </div>
     </div>
+
     <div class="lowerpart">
+        <div class="more-info-label">
+            More Information
+        </div>
+        <div class="more-info-container">
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../assets/low-temperature.png">
+                    <span>MIN</span>
+                </div>
+                <div class="info-block-value">
+                    10 °C
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../assets/high-temperature.png">
+                    <span>MAX</span>
+                </div>
+                <div class="info-block-value">
+                    20 °C
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../assets/humidity.png">
+                    <span>MIN</span>
+                </div>
+                <div class="info-block-value">
+                    77%
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../assets/wind.png">
+                    <span>WIND</span>
+                </div>
+                <div class="info-block-value">
+                    11 km/h
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
