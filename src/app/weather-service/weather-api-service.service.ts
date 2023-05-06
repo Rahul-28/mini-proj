@@ -9,7 +9,7 @@ import { WeatherInterface } from '../model/climate-interface';
 export class WeatherApiServiceService {
 
   WEATHER_API_BASE_URL ='https://api.openweathermap.org/data/2.5';
-  WEATHER_API_KEY = 'f9c023d383bba1a696ca8371629d9b4e';
+  WEATHER_API_KEY = '';
 
   constructor( private http: HttpClient ) { }
 
