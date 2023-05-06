@@ -1,7 +1,7 @@
 # List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
 tasks:
   - name: Script Task
-    init: npm i -g @angular/cli && npm install -D tailwindcss postcss autoprefixer # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
+    init: npm i -g @angular/cli 
     command: npm start
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
@@ -12,3 +12,7 @@ ports:
     onOpen: open-preview
 
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
+
+vscode:
+  extensions:
+    - "rangav.vscode-thunder-client"

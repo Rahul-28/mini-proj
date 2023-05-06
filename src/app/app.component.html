@@ -1,6 +1,71 @@
-<div class="containerapp">
+<div class="search">
+    <form #form="ngForm" (submit)="onSubmit()">
+        <input type="text" placeholder="Search city" name="city" [(ngModel)]="cityName"/>
+    </form>
+</div>
+
+<div class="containerapp" *ngIf="weatherData">
     <div class="upperpart">
-        <!-- <img src="../assets/pexels-pixabay-36717.jpg"> -->
+        <img src="../assets/pexels-pixabay-36717.jpg" *ngIf="weatherData.main.temp > 15">
+        <img src="../assets/pexels-rafael-cerqueira-4737484.jpg" *ngIf="weatherData.main.temp <= 15">
+        <div class="weather-data">
+            <div class="location">{{ weatherData.name }}</div>
+            <div class="temperature">{{ weatherData.main.temp | number: '1.0-0' }} °C</div>
+        </div>
+    </div>
+
+    <div class="lowerpart">
+        <div class="more-info-label">
+            More Information
+        </div>
+        <div class="more-info-container">
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../assets/low-temperature.png">
+                    <span>MIN</span>
+                </div>
+                <div class="info-block-value">
+                    {{ weatherData.main.temp_min | number: '1.0-0' }} °C
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../assets/high-temperature.png">
+                    <span>MAX</span>
+                </div>
+                <div class="info-block-value">
+                    {{ weatherData.main.temp_max | number: '1.0-0' }} °C
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../assets/humidity.png">
+                    <span>HUM</span>
+                </div>
+                <div class="info-block-value">
+                    {{ weatherData.main.humidity | number: '1.0-0' }} %
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../assets/wind.png">
+                    <span>WIND</span>
+                </div>
+                <div class="info-block-value">
+                    {{ weatherData.wind.speed | number: '1.0-0' }} Km/h
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- <div class="containerapp">
+    <div class="upperpart">
+        <img src="../assets/pexels-pixabay-36717.jpg">
         <img src="../assets/pexels-rafael-cerqueira-4737484.jpg">
         <div class="weather-data">
             <div class="location">MADURAI</div>
@@ -55,6 +120,7 @@
         </div>
 
     </div>
-</div>
+</div> -->
+
 
 <router-outlet></router-outlet>
