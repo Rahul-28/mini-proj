@@ -6,8 +6,8 @@
 
 <div class="containerapp" *ngIf="weatherData">
     <div class="upperpart">
-        <img src="../assets/pexels-pixabay-36717.jpg" *ngIf="weatherData.main.temp > 15">
-        <img src="../assets/pexels-rafael-cerqueira-4737484.jpg" *ngIf="weatherData.main.temp <= 15">
+        <img src="../assets/sunnyweather.jpg" *ngIf="weatherData.main.temp > 15">
+        <img src="../assets/rainyweather.jpg" *ngIf="weatherData.main.temp <= 15">
         <div class="weather-data">
             <div class="location">{{ weatherData.name }}</div>
             <div class="temperature">{{ weatherData.main.temp | number: '1.0-0' }} °C</div>
